@@ -374,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250969508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: -0.06, z: 0.5}
+  m_LocalPosition: {x: -3.3, y: -2.13, z: 0.5}
   m_LocalScale: {x: 0.05957, y: 0.05957, z: 0.05957}
   m_Children:
   - {fileID: 613097305}
@@ -393,9 +393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c2c22142d3e42b18b6095322aadc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 110
+  moveSpeed: 70
   rotationSpeed: 110
   player: 1
+  heath: 0
 --- !u!50 &250969512
 Rigidbody2D:
   serializedVersion: 4
@@ -1255,6 +1256,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePlayer1: {fileID: 924470534}
   scorePlayer2: {fileID: 1557720430}
+  Player1: {fileID: 250969508}
+  Player2: {fileID: 952419750}
+  PlayerScript1: {fileID: 0}
+  PlayerScript2: {fileID: 0}
 --- !u!4 &856945628
 Transform:
   m_ObjectHideFlags: 0
@@ -1399,9 +1404,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c2c22142d3e42b18b6095322aadc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 110
+  moveSpeed: 70
   rotationSpeed: 110
   player: 2
+  heath: 0
 --- !u!212 &952419753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1459,7 +1465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952419750}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -1.22, y: 1.43, z: 0}
+  m_LocalPosition: {x: 3.2, y: 1.79, z: 0}
   m_LocalScale: {x: 0.05957, y: 0.05957, z: 0.05957}
   m_Children:
   - {fileID: 1912982341}
@@ -2131,7 +2137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912982340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08393679, y: -0.033571515, z: 0}
+  m_LocalPosition: {x: -0.08393679, y: -0.033571515, z: -0.1}
   m_LocalScale: {x: 0.9618046, y: 0.9618046, z: 0.9618046}
   m_Children:
   - {fileID: 1573884380}
@@ -2174,7 +2180,7 @@ MonoBehaviour:
   rotationSpeed: 200
   player: 2
   tankBase: {fileID: 952419750}
-  localPositionArm: {x: 0, y: 0, z: 0}
+  localPositionArm: {x: 0, y: 0, z: -0.5}
 --- !u!212 &1912982344
 SpriteRenderer:
   m_ObjectHideFlags: 0
