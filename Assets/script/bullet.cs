@@ -8,10 +8,5 @@ public class bullet : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle") {
             Destroy(gameObject);
         }
-        
-         
-        if (collision.gameObject.tag == "Player") {
-            Destroy(gameObject);
-        } 
     }
 }

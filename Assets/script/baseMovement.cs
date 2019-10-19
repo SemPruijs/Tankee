@@ -9,10 +9,12 @@ public class baseMovement : MonoBehaviour
     public float rotationSpeed;      
     public int player;
     private Rigidbody2D rb2d;
+    public int heath;
 
     void Start()
     {
          rb2d = GetComponent<Rigidbody2D> ();
+         heath =+ 30;
     }
 
     // Update is called once per frame
@@ -28,9 +30,21 @@ public class baseMovement : MonoBehaviour
         //transform.Translate(transform.up * moveSpeed * Time.deltaTime * moveVertical);
 
         rb2d.velocity = transform.up * Time.deltaTime * moveSpeed * -moveVertical;
+    }
 
-     
+    void damage() {
+        heath = heath - 1;
+        print(heath.ToString());
+    }
 
-        
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "bullet") {
+            Destroy(collision.gameObject);
+            if (heath == 0) {
+                Destroy(gameObject);
+            } else {
+                damage();
+            }
+        }
     }
 }

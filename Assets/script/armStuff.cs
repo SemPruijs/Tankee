@@ -21,6 +21,5 @@ public class armStuff : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(0, 0, -rotation);
         transform.localPosition = localPositionArm;
-        print("hello github");
     }
 }
