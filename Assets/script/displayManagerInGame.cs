@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class displayMangers : MonoBehaviour
+public class displayManagerInGame : MonoBehaviour
 {
     public Text scorePlayer1;
     public Text scorePlayer2;

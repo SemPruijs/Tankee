@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 5671092756778849095, guid: c696146555ce8469cb478ed873d3ff90,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5671092756778849095, guid: c696146555ce8469cb478ed873d3ff90,
         type: 3}
@@ -285,7 +285,7 @@ Transform:
   m_LocalScale: {x: 1.649461, y: 1.342728, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &478286210
 PrefabInstance:
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 856945626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701ce3c9a778c4ff5935f1830fd79fbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 58933df86101143178755b3800194e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scorePlayer1: {fileID: 924470534}
@@ -726,7 +726,7 @@ PrefabInstance:
     - target: {fileID: 7160039421333004521, guid: 86d9a567131c247188d3eee617adf202,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7160039421333004521, guid: 86d9a567131c247188d3eee617adf202,
         type: 3}
@@ -889,7 +889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1314845600
 AudioSource:
@@ -1201,7 +1201,7 @@ PrefabInstance:
     - target: {fileID: 7160039421333004521, guid: 86d9a567131c247188d3eee617adf202,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7160039421333004521, guid: 86d9a567131c247188d3eee617adf202,
         type: 3}
@@ -1270,7 +1270,7 @@ PrefabInstance:
     - target: {fileID: 7160039421333004521, guid: 86d9a567131c247188d3eee617adf202,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7160039421333004521, guid: 86d9a567131c247188d3eee617adf202,
         type: 3}
