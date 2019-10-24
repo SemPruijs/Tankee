@@ -10,7 +10,7 @@ public class baseMovement : MonoBehaviour
     public int player;
     private Rigidbody2D rb2d;
     public int heath;
-
+    public float angle;
     void Start()
     {
          rb2d = GetComponent<Rigidbody2D> ();
@@ -18,18 +18,24 @@ public class baseMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxisRaw ("LJX" + player.ToString());
-        float moveVertical = Input.GetAxisRaw ("LJY" + player.ToString());
+        float moveHorizontal = Input.GetAxis ("LJX" + player.ToString());
+        float moveVertical = Input.GetAxis ("LJY" + player.ToString());
 
-        rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
+        if (moveHorizontal != 0.0f || moveVertical != 0.0f) {
+            // rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
+            angle = Mathf.Atan2(moveVertical, -moveHorizontal) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle + 90.0f);
+            //rb2d.velocity = transform.up * Time.deltaTime * moveSpeed;
+            rb2d.AddForce(transform.up * Time.deltaTime * moveSpeed);
+            
+            // while (transform. rotation != Quaternion.Euler(0, 0, angle + 90.0f)) {
+            //     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, angle, 0), moveSpeed * Time.time);
 
-        transform.rotation = Quaternion.Euler(0, 0, -rotation);
-
-        //transform.Translate(transform.up * moveSpeed * Time.deltaTime * moveVertical);
-
-        rb2d.velocity = transform.up * Time.deltaTime * moveSpeed * -moveVertical;
+            // }
+        }
+        
     }
 
     void damage() {

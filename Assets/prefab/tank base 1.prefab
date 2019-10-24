@@ -148,6 +148,7 @@ MonoBehaviour:
   rotationSpeed: 110
   player: 1
   heath: 0
+  angle: 0
 --- !u!50 &5671092756778849097
 Rigidbody2D:
   serializedVersion: 4
@@ -162,7 +163,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 8
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
