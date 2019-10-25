@@ -13,6 +13,7 @@ public class baseMovement : MonoBehaviour
     public float angle;
 
     public AudioClip deadSound;
+    public AudioClip impactSound;
     public AudioSource audioSource;
     void Start()
     {
@@ -41,6 +42,7 @@ public class baseMovement : MonoBehaviour
     }
 
     void damage() {
+        audioSource.PlayOneShot(impactSound, 0.1F);
         heath = heath - 1;
         print(heath.ToString());
     }

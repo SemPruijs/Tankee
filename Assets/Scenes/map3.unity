@@ -202,6 +202,11 @@ PrefabInstance:
       propertyPath: deadSound
       value: 
       objectReference: {fileID: 8300000, guid: 158a10bce54ed413694c3616197f61d2, type: 3}
+    - target: {fileID: 5671092756778849094, guid: c696146555ce8469cb478ed873d3ff90,
+        type: 3}
+      propertyPath: impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
     - target: {fileID: 5671092756656204978, guid: c696146555ce8469cb478ed873d3ff90,
         type: 3}
       propertyPath: shootSound
@@ -403,6 +408,11 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1314845600}
+    - target: {fileID: 4232630059139381340, guid: 9a4cde7f203ab4ca4900f335465215d1,
+        type: 3}
+      propertyPath: impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
     - target: {fileID: 4232630059139381342, guid: 9a4cde7f203ab4ca4900f335465215d1,
         type: 3}
       propertyPath: m_LocalPosition.x
