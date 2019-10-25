@@ -20,20 +20,19 @@ public class baseMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis ("LJX" + player.ToString());
+        float moveHorizontal = Input.GetAxis ("LJX" + player.ToString()); 
         float moveVertical = Input.GetAxis ("LJY" + player.ToString());
 
         if (moveHorizontal != 0.0f || moveVertical != 0.0f) {
             // rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
             angle = Mathf.Atan2(moveVertical, -moveHorizontal) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle + 90.0f);
+            // transform.rotation = Quaternion.Euler(0, 0, angle + 90.0f);
             //rb2d.velocity = transform.up * Time.deltaTime * moveSpeed;
             rb2d.AddForce(transform.up * Time.deltaTime * moveSpeed);
             
-            // while (transform. rotation != Quaternion.Euler(0, 0, angle + 90.0f)) {
-            //     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, angle, 0), moveSpeed * Time.time);
-
-            // }
+            if  (transform.rotation != Quaternion.Euler(0, 0, angle + 90.0f)) {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, angle + 90.0f), rotationSpeed * Time.deltaTime);
+            }
         }
         
     }

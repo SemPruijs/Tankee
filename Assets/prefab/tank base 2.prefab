@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c2c22142d3e42b18b6095322aadc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 70
-  rotationSpeed: 110
+  moveSpeed: 400
+  rotationSpeed: 3
   player: 2
   heath: 0
+  angle: 0
 --- !u!50 &4232630059139381331
 Rigidbody2D:
   serializedVersion: 4
@@ -113,8 +114,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 10
+  m_AngularDrag: 2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
