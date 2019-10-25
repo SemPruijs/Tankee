@@ -11,6 +11,9 @@ public class baseMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     public int heath;
     public float angle;
+
+    public AudioClip deadSound;
+    public AudioSource audioSource;
     void Start()
     {
          rb2d = GetComponent<Rigidbody2D> ();
@@ -44,12 +47,13 @@ public class baseMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "bullet") {
-            Destroy(collision.gameObject);
             if (heath == 0) {
+                audioSource.PlayOneShot(deadSound);
                 Destroy(gameObject);
             } else {
                 damage();
             }
+            Destroy(collision.gameObject);
         }
     }
 }
