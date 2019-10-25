@@ -1454,6 +1454,11 @@ PrefabInstance:
       propertyPath: impactSound
       value: 
       objectReference: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
+    - target: {fileID: 5671092757220192699, guid: c696146555ce8469cb478ed873d3ff90,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5671092756656204978, guid: c696146555ce8469cb478ed873d3ff90,
         type: 3}
       propertyPath: shootSound

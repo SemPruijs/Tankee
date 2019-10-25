@@ -10,10 +10,10 @@ public class armStuff : MonoBehaviour
     public GameObject tankBase;
     public Vector3 localPositionArm;
 
-    void Update()
+    void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxisRaw ("RJX" + player.ToString());
-        
+        float moveVertical = Input.GetAxisRaw ("RJY" + player.ToString());
         if (rotation >= 360 ) {
             rotation = 0;
         }
@@ -21,5 +21,7 @@ public class armStuff : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(0, 0, -rotation);
         transform.localPosition = localPositionArm;
+
+        print(moveVertical);
     }
 }
