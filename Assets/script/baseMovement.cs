@@ -31,10 +31,11 @@ public class baseMovement : MonoBehaviour
         //     angle = Mathf.Atan2(moveVertical, -moveHorizontal) * Mathf.Rad2Deg;
         //     //rb2d.velocity = transform.up * Time.deltaTime * moveSpeed;
       
-        rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
+        // rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
 
-        transform.rotation = Quaternion.Euler(0, 0, -rotation);
-        rb2d.AddForce(transform.up * Time.deltaTime * moveSpeed * -moveVertical);
+        // transform.rotation = Quaternion.Euler(0, 0, -rotation);
+        rb2d.AddForce(transform.up * Time.fixedDeltaTime * moveSpeed * -moveVertical);
+        rb2d.AddTorque(-rotationSpeed * moveHorizontal * Time.fixedDeltaTime);
             
         //     if  (transform.rotation != Quaternion.Euler(0, 0, angle + 90.0f)) {
         //         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, angle + 90.0f), rotationSpeed * Time.deltaTime);
