@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - bullet
+  - audioSource
   layers:
   - Default
   - TransparentFX

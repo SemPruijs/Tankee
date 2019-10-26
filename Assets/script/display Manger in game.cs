@@ -16,13 +16,12 @@ public class displayMangers : MonoBehaviour
 
     void Start() {
         PlayerScript1 = Player1.GetComponent<baseMovement>();
-        PlayerScript2 = Player2.GetComponent<baseMovement>();
-
-        print("test");
+        PlayerScript2 = Player2.GetComponent<baseMovement>();       
     }
 
     void Update() {
-        scorePlayer1.text = PlayerScript1.heath.ToString();
-        scorePlayer2.text = PlayerScript2.heath.ToString();
+        // scorePlayer1.text = PlayerScript1.heath.ToString();
+        // scorePlayer1.text = "H";
+        // scorePlayer2.text = PlayerScript2.heath.ToString();
     }
 }

@@ -19,6 +19,7 @@ public class baseMovement : MonoBehaviour
     {
          rb2d = GetComponent<Rigidbody2D> ();
          heath =+ 30;
+         audioSource = GameObject.FindWithTag ("audioSource").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,7 +54,7 @@ public class baseMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "bullet") {
             if (heath == 0) {
-                audioSource.PlayOneShot(deadSound);
+                audioSource.PlayOneShot(deadSound, 1.0F);
                 Destroy(gameObject);
             } else {
                 damage();

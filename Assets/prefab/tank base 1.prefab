@@ -255,9 +255,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4868119503987855805}
   - component: {fileID: 4868119503987855806}
-  - component: {fileID: 4868119503987855802}
   - component: {fileID: 4868119503987855807}
   - component: {fileID: 4868119503987855800}
+  - component: {fileID: 6350093932642966330}
   m_Layer: 0
   m_Name: tank base 1
   m_TagString: Player
@@ -329,26 +329,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4868119503987855802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4868119503987855801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c2c22142d3e42b18b6095322aadc6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 700
-  rotationSpeed: 60
-  player: 1
-  heath: 0
-  angle: 0
-  deadSound: {fileID: 8300000, guid: 158a10bce54ed413694c3616197f61d2, type: 3}
-  impactSound: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
-  audioSource: {fileID: 0}
 --- !u!50 &4868119503987855807
 Rigidbody2D:
   serializedVersion: 4
@@ -396,3 +376,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.911987, y: 11.964113}
   m_EdgeRadius: 0
+--- !u!114 &6350093932642966330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868119503987855801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c2c22142d3e42b18b6095322aadc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 700
+  rotationSpeed: 60
+  player: 1
+  heath: 0
+  angle: 0
+  deadSound: {fileID: 8300000, guid: 158a10bce54ed413694c3616197f61d2, type: 3}
+  impactSound: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
+  audioSource: {fileID: 0}

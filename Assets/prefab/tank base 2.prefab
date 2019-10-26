@@ -344,7 +344,7 @@ MonoBehaviour:
   moveSpeed: 700
   rotationSpeed: 60
   player: 2
-  heath: 0
+  heath: 30
   angle: 0
   deadSound: {fileID: 8300000, guid: 158a10bce54ed413694c3616197f61d2, type: 3}
   impactSound: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
