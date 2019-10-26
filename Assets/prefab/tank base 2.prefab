@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 3430121570852205317}
   - component: {fileID: 3430121570852205337}
   - component: {fileID: 3430121570852205318}
-  - component: {fileID: 3430121570852205319}
+  - component: {fileID: 2419289307322085379}
   m_Layer: 0
   m_Name: tank base 2
   m_TagString: Player
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 700
-  rotationSpeed: 60
+  rotationSpeed: 40
   player: 2
   heath: 30
   angle: 0
@@ -370,8 +370,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &3430121570852205319
-BoxCollider2D:
+--- !u!70 &2419289307322085379
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -383,16 +383,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09845352, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 12}
-    newSize: {x: 8, y: 12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.575861, y: 12}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.018704873, y: 0}
+  m_Size: {x: 5.9424825, y: 12}
+  m_Direction: 0
