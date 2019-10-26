@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public GameObject particelExplotion;
+    public GameObject particelExplotionEnemy;
+    public GameObject particelExplotionObstacle;
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Player") {
-            Explode();
+            ExplodeEnemy();
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Obstacle") {
+            ExplodeObstacle();
             Destroy(gameObject);
         }
     }
 
-    void Explode() {
-        GameObject ParticleSystem = Instantiate(particelExplotion, transform.position, Quaternion.identity);
+    void ExplodeEnemy() {
+        GameObject ParticleSystem = Instantiate(particelExplotionEnemy, transform.position, Quaternion.identity);
         ParticleSystem.GetComponent<ParticleSystem>().Play();
-        Destroy(particelExplotion, 0.15f);
+        Destroy(particelExplotionEnemy, 0.15f);
+    }
+
+    void ExplodeObstacle() {
+        GameObject ParticleSystem = Instantiate(particelExplotionObstacle, transform.position, Quaternion.identity);
+        ParticleSystem.GetComponent<ParticleSystem>().Play();
+        Destroy(particelExplotionObstacle, 0.15f);
     }
 }

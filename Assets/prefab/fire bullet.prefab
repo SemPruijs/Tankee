@@ -116,7 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b68c9eb7978f4a11839bf7ee9a60502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particelExplotion: {fileID: 3225108296712791341, guid: 99730c24bb82b4616a4d60d714f8feb1,
+  particelExplotionEnemy: {fileID: 3225108296712791341, guid: 99730c24bb82b4616a4d60d714f8feb1,
+    type: 3}
+  particelExplotionObstacle: {fileID: 3225108296712791341, guid: 06a54230139f0487db9b952df08f9502,
     type: 3}
 --- !u!68 &3050835811785943682
 EdgeCollider2D:
