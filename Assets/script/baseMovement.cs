@@ -59,7 +59,6 @@ public class baseMovement : MonoBehaviour
             } else {
                 damage();
             }
-            Destroy(collision.gameObject);
         }
     }
 }

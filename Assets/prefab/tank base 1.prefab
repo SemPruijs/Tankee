@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 4868119502630934825}
-  fireBullet: {fileID: 5273003033159380099, guid: fb99a9cebcc07405487d4228ec40f246,
+  fireBullet: {fileID: 496943077088568019, guid: fb99a9cebcc07405487d4228ec40f246,
     type: 3}
   bulletSpeed: 300
   player: 1

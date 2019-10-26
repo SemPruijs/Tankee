@@ -10,7 +10,7 @@ public class shooting : MonoBehaviour
     public int player;
     public AudioClip shootSound;
     AudioSource audioSource;
-
+    
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
