@@ -7,12 +7,15 @@ public class displayMangers : MonoBehaviour
 {
     public Text scorePlayer1;
     public Text scorePlayer2;
+    public Text countDownText;
 
     public GameObject Player1;
     public GameObject Player2;
 
     public baseMovement PlayerScript1;
     public baseMovement PlayerScript2;
+
+    private int time = 3;
 
     void Start() {
         PlayerScript1 = Player1.GetComponent<baseMovement>();
