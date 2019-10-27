@@ -26,10 +26,7 @@ public class sceneLoader : MonoBehaviour
         displayManagers.Player2 = Instantiate(yellowTank, new Vector3(6f, 0f, 0.5f),Quaternion.Euler(0, 0, 90)).GetComponent<baseMovement>();
     }
 
-    public void destroyTankees() {
-        Destroy(displayManagers.Player1);
-        Destroy(displayManagers.Player2);
-    }   
+    
 
 
     public void map2() {

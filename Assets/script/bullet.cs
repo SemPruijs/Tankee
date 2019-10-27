@@ -13,8 +13,8 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Obstacle") {
-            ExplodeObstacle();
             Destroy(gameObject);
+            ExplodeObstacle();
         }
     }
 
