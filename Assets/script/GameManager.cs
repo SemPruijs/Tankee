@@ -8,13 +8,19 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance {
         get {
-            if (_instance == null) {
-               _instance = new GameManager(); 
-            }
             return _instance;
         }
     }
 
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+        }
+    }
 
     public displayManagerInGame displayManagers;
 
@@ -28,21 +34,21 @@ public class GameManager : MonoBehaviour
 
 
     public enum State {playing, pause, counting, hasWon};
-    public State state;
+    public State state = State.pause;
 
     public Scene currentScene;
 
     void Start() {
         currentScene = SceneManager.GetActiveScene();
-
+        spawnTankees();
     }
     public void destroyTankees() {
         Destroy(greenTank);
         Destroy(yellowTank);
     }   
 
-    public void restart() {
-
+    public void aTest() {
+        print("a test");
     }
 
     public void spawnTankees() {
@@ -61,6 +67,7 @@ public class GameManager : MonoBehaviour
             break;
         }
     }
-
-
+    public void playing() {
+        state = State.playing;
+    }
 }

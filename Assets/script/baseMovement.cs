@@ -25,8 +25,8 @@ public class baseMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis ("LJX" + player.ToString()); 
-        float moveVertical = Input.GetAxis ("LJY" + player.ToString());
+            float moveHorizontal = Input.GetAxis ("LJX" + player.ToString()); 
+            float moveVertical = Input.GetAxis ("LJY" + player.ToString());
 
         // if (moveHorizontal != 0.0f || moveVertical != 0.0f) {
         //     angle = Mathf.Atan2(moveVertical, -moveHorizontal) * Mathf.Rad2Deg;
@@ -35,13 +35,17 @@ public class baseMovement : MonoBehaviour
         // rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
 
         // transform.rotation = Quaternion.Euler(0, 0, -rotation);
-        rb2d.AddForce(transform.up * Time.fixedDeltaTime * moveSpeed * -moveVertical);
-        rb2d.AddTorque(-rotationSpeed * moveHorizontal * Time.fixedDeltaTime);
+        if (GameManager.Instance.state == GameManager.State.playing) {
+            rb2d.AddForce(transform.up * Time.fixedDeltaTime * moveSpeed * -moveVertical);
+            rb2d.AddTorque(-rotationSpeed * moveHorizontal * Time.fixedDeltaTime);
+        }
             
         //     if  (transform.rotation != Quaternion.Euler(0, 0, angle + 90.0f)) {
         //         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, angle + 90.0f), rotationSpeed * Time.deltaTime);
         //     }
         // }
+
+        print(GameManager.Instance.state == GameManager.State.playing);
         
     }
 
