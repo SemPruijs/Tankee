@@ -21,12 +21,12 @@ public class bullet : MonoBehaviour
     void ExplodeEnemy() {
         GameObject ParticleSystem = Instantiate(particelExplotionEnemy, transform.position, Quaternion.identity);
         ParticleSystem.GetComponent<ParticleSystem>().Play();
-        Destroy(particelExplotionEnemy, 0.15f);
+        Destroy(ParticleSystem, 0.15f);
     }
 
     void ExplodeObstacle() {
         GameObject ParticleSystem = Instantiate(particelExplotionObstacle, transform.position, Quaternion.identity);
         ParticleSystem.GetComponent<ParticleSystem>().Play();
-        Destroy(particelExplotionObstacle, 0.15f);
+        Destroy(ParticleSystem, 0.15f);
     }
 }
