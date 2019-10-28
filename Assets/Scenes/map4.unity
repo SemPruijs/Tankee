@@ -519,8 +519,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1898509617}
-        m_MethodName: spawnTanksMap2and3and4
+      - m_Target: {fileID: 904703888}
+        m_MethodName: spawnTankees
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -889,6 +889,59 @@ EdgeCollider2D:
   - {x: -2.9314783, y: -3.727837}
   - {x: -4.727065, y: -3.5982416}
   - {x: -4.554311, y: 1.9077573}
+--- !u!1 &904703887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904703889}
+  - component: {fileID: 904703888}
+  m_Layer: 0
+  m_Name: game manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &904703888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904703887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bcbdbe2218a44ded9c91c766699bbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayManagers: {fileID: 1125975305}
+  greenTank: {fileID: 4868119503987855801, guid: c696146555ce8469cb478ed873d3ff90,
+    type: 3}
+  yellowTank: {fileID: 3430121570852205336, guid: 9a4cde7f203ab4ca4900f335465215d1,
+    type: 3}
+  blueTank: {fileID: 0}
+  pinkTank: {fileID: 0}
+  state: 0
+  currentScene:
+    m_Handle: 0
+--- !u!4 &904703889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904703887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0465723, y: -1.2852092, z: -1.6821834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924470532
 GameObject:
   m_ObjectHideFlags: 0

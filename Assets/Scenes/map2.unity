@@ -5272,8 +5272,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1898509617}
-        m_MethodName: spawnTanksMap2and3and4
+      - m_Target: {fileID: 969270204}
+        m_MethodName: spawnTankees
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5748,12 +5748,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bcbdbe2218a44ded9c91c766699bbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  greenPlayer: {fileID: 4868119503987855801, guid: c696146555ce8469cb478ed873d3ff90,
+  displayManagers: {fileID: 1125975305}
+  greenTank: {fileID: 4868119503987855801, guid: c696146555ce8469cb478ed873d3ff90,
     type: 3}
-  yellowPlayer: {fileID: 3430121570852205336, guid: 9a4cde7f203ab4ca4900f335465215d1,
+  yellowTank: {fileID: 3430121570852205336, guid: 9a4cde7f203ab4ca4900f335465215d1,
     type: 3}
-  bluePlayer: {fileID: 0}
-  pinkPlayer: {fileID: 0}
+  blueTank: {fileID: 0}
+  pinkTank: {fileID: 0}
+  state: 0
+  currentScene:
+    m_Handle: 0
 --- !u!4 &969270205
 Transform:
   m_ObjectHideFlags: 0
@@ -6008,10 +6012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePlayer1: {fileID: 924470534}
   scorePlayer2: {fileID: 1557720430}
-  countDownText: {fileID: 0}
   Player1: {fileID: 0}
   Player2: {fileID: 0}
-  time: 3
 --- !u!4 &1125975306
 Transform:
   m_ObjectHideFlags: 0

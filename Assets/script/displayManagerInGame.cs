@@ -7,11 +7,8 @@ public class displayManagerInGame : MonoBehaviour
 {
     public Text scorePlayer1;
     public Text scorePlayer2;
-    public Text countDownText;
     public baseMovement Player1;
     public baseMovement Player2;
-
-    public int time = 3;
 
     void Update() {
         scorePlayer1.text = Player1.heath.ToString();
