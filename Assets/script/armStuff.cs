@@ -20,12 +20,13 @@ public class armStuff : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxisRaw ("RJX" + player.ToString());
         // float moveVertical = Input.GetAxisRaw ("RJY" + player.ToString());
-        if (rotation >= 360 ) {
-            rotation = 0;
+        if (GameManager.Instance.state == GameManager.State.playing) {
+            if (rotation >= 360 ) {
+                 rotation = 0;
+             }
+            rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
+            transform.localRotation = Quaternion.Euler(0, 0, -rotation);
         }
-        rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
-
-        transform.localRotation = Quaternion.Euler(0, 0, -rotation);
         // transform.localPosition = localPositionArm;
         // rb2d.AddTorque(moveHorizontal * Time.fixedDeltaTime);
         // print(moveVertical);

@@ -19,7 +19,9 @@ public class shooting : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Abutton" + player.ToString())) {
-            shoot();
+            if (GameManager.Instance.state == GameManager.State.playing) {
+                shoot();
+            }
         }
             
     }

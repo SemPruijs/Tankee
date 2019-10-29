@@ -47,10 +47,6 @@ public class GameManager : MonoBehaviour
         Destroy(yellowTank);
     }   
 
-    public void aTest() {
-        print("a test");
-    }
-
     public void spawnTankees() {
         string sceneName = currentScene.name;
         print(sceneName);
