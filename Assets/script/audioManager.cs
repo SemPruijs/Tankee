@@ -10,6 +10,13 @@ public class audioManager : MonoBehaviour
     void Start()
     {
         audioSource.clip = map1;
-        audioSource.Play();
+    }
+
+    void Update() {
+        if (!audioSource.isPlaying) {
+            if (GameManager.Instance.state == GameManager.State.playing) {
+                audioSource.Play();
+            }
+        }
     }
 }
