@@ -59,6 +59,7 @@ public class baseMovement : MonoBehaviour
         if (collision.gameObject.tag == "bullet") {
             if (heath == 0) {
                 audioSource.PlayOneShot(deadSound, 1.0F);
+                GameManager.Instance.state = GameManager.State.hasWon;
                 Destroy(gameObject);
             } else {
                 damage();

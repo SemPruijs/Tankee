@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject yellowTank;
     public GameObject blueTank;
     public GameObject pinkTank;
-    public enum players {green, yellow, blue, pink};
+    public enum player {green, yellow, blue, pink};
 
 
 
@@ -65,5 +65,9 @@ public class GameManager : MonoBehaviour
     }
     public void playing() {
         state = State.playing;
+    }
+
+    public player hasWon(player hasWon) {
+        return hasWon; 
     }
 }
