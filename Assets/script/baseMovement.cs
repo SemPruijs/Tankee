@@ -44,9 +44,6 @@ public class baseMovement : MonoBehaviour
         //         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, angle + 90.0f), rotationSpeed * Time.deltaTime);
         //     }
         // }
-
-        print(GameManager.Instance.state == GameManager.State.playing);
-        
     }
 
     void damage() {

@@ -29,4 +29,8 @@ public class sceneLoader : MonoBehaviour
     public void mainMenu() {
         SceneManager.LoadScene("main menu");
     }
+
+    public void ReloadLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

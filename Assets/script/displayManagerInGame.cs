@@ -13,6 +13,9 @@ public class displayManagerInGame : MonoBehaviour
     public float timeLeft = 3; 
     private string TimeLeftString;
     public GameObject InGameCanvasGameObject;
+    public GameObject counting;
+    public GameObject playing;
+    public GameObject hasWon;
     void Update() {
         //health
         scorePlayer1.text = Player1.heath.ToString();
@@ -32,5 +35,8 @@ public class displayManagerInGame : MonoBehaviour
         }
         timeLeftText.text = TimeLeftString;
         timeLeft -= Time.deltaTime;
+        counting.SetActive(GameManager.Instance.state == GameManager.State.counting || GameManager.Instance.state == GameManager.State.playing);
+        playing.SetActive(GameManager.Instance.state == GameManager.State.playing);
+        hasWon.SetActive(GameManager.Instance.state == GameManager.State.hasWon);
     }
 }
