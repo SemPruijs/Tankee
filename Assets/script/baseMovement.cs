@@ -52,9 +52,20 @@ public class baseMovement : MonoBehaviour
         print(heath.ToString());
     }
 
+    void whoHasWon() {
+        if (player == 1) {
+            //yellow
+            GameManager.Instance.hasWonString = "Yellow player wins!";
+        } else {
+            //green
+            GameManager.Instance.hasWonString = "Green player wins!";
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "bullet") {
-            if (heath == 0) {
+            if (heath == 1) {
+                whoHasWon();    
                 audioSource.PlayOneShot(deadSound, 1.0F);
                 GameManager.Instance.state = GameManager.State.hasWon;
                 Destroy(gameObject);

@@ -8,6 +8,7 @@ public class displayManagerInGame : MonoBehaviour
     public Text scorePlayer1;
     public Text scorePlayer2;
     public Text timeLeftText;
+    public Text hasWonText;
     public baseMovement Player1;
     public baseMovement Player2;
     public float timeLeft = 3; 
@@ -38,5 +39,6 @@ public class displayManagerInGame : MonoBehaviour
         counting.SetActive(GameManager.Instance.state == GameManager.State.counting || GameManager.Instance.state == GameManager.State.playing);
         playing.SetActive(GameManager.Instance.state == GameManager.State.playing);
         hasWon.SetActive(GameManager.Instance.state == GameManager.State.hasWon);
+        hasWonText.text = GameManager.Instance.hasWonString;
     }
 }

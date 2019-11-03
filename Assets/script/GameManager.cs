@@ -31,12 +31,11 @@ public class GameManager : MonoBehaviour
     public GameObject pinkTank;
     public enum player {green, yellow, blue, pink};
 
-
-
     public enum State {playing, pause, counting, hasWon};
     public State state = State.pause;
-
     public Scene currentScene;
+    public string hasWonString;
+
 
     void Start() {
         currentScene = SceneManager.GetActiveScene();
@@ -65,9 +64,5 @@ public class GameManager : MonoBehaviour
     }
     public void playing() {
         state = State.playing;
-    }
-
-    public player hasWon(player hasWon) {
-        return hasWon; 
     }
 }

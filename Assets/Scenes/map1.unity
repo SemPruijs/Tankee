@@ -1180,6 +1180,7 @@ MonoBehaviour:
   counting: {fileID: 1697513425}
   playing: {fileID: 72797967}
   hasWon: {fileID: 319215990}
+  hasWonText: {fileID: 1671748650}
 --- !u!4 &1125975306
 Transform:
   m_ObjectHideFlags: 0
@@ -1233,6 +1234,7 @@ MonoBehaviour:
   state: 2
   currentScene:
     m_Handle: 0
+  hasWonString: 
 --- !u!4 &1226396703
 Transform:
   m_ObjectHideFlags: 0

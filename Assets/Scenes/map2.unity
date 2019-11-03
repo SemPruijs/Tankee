@@ -1302,6 +1302,7 @@ MonoBehaviour:
   scorePlayer1: {fileID: 924470534}
   scorePlayer2: {fileID: 1557720430}
   timeLeftText: {fileID: 1837828656}
+  hasWonText: {fileID: 1671748650}
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   timeLeft: 3
@@ -1362,6 +1363,7 @@ MonoBehaviour:
   state: 2
   currentScene:
     m_Handle: 0
+  hasWonString: 
 --- !u!4 &1226396703
 Transform:
   m_ObjectHideFlags: 0
