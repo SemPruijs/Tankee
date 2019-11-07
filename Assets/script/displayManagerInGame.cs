@@ -27,8 +27,6 @@ public class displayManagerInGame : MonoBehaviour
         {
             TimeLeftString = "Fight!";
             GameManager.Instance.state = GameManager.State.playing;
-            print("done");
-            InGameCanvasGameObject.SetActive(true);
         } else if (timeLeft < -1) {
             TimeLeftString = "";
         } else {

@@ -15,6 +15,9 @@ public class baseMovement : MonoBehaviour
     public AudioClip deadSound;
     public AudioClip impactSound;
     public AudioSource audioSource;
+
+    //time for powerup
+    public float TimeSpeed;
     void Start()
     {
          rb2d = GetComponent<Rigidbody2D> ();
@@ -62,6 +65,19 @@ public class baseMovement : MonoBehaviour
         }
     }
 
+    void speedPowerUp() {
+        float timeLeft = 30f;
+        TimeSpeed = 30f;
+        while (timeLeft >= 0f) {
+        print(timeLeft -= Time.fixedDeltaTime);
+        moveSpeed = 1500;
+        rotationSpeed = 80;
+        }
+        print("done with speed!");
+        moveSpeed = 700;
+        rotationSpeed = 40;
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "bullet") {
             if (heath == 1) {
@@ -72,6 +88,13 @@ public class baseMovement : MonoBehaviour
             } else {
                 damage();
             }
+        }
+        if (collision.gameObject.tag == "speedPowerUp") {
+            Destroy(collision.gameObject);
+            // speedPowerUp();
+            moveSpeed = 1500;
+            rotationSpeed = 80;
+print("this works");
         }
     }
 }
