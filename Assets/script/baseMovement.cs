@@ -68,8 +68,9 @@ public class baseMovement : MonoBehaviour
     void speedPowerUp() {
         float timeLeft = 30f;
         TimeSpeed = 30f;
-        while (timeLeft >= 0f) {
+        if (timeLeft >= 0f) {
         print(timeLeft -= Time.fixedDeltaTime);
+        timeLeft -= Time.fixedDeltaTime;
         moveSpeed = 1500;
         rotationSpeed = 80;
         }
@@ -91,10 +92,10 @@ public class baseMovement : MonoBehaviour
         }
         if (collision.gameObject.tag == "speedPowerUp") {
             Destroy(collision.gameObject);
-            // speedPowerUp();
+            speedPowerUp();
             moveSpeed = 1500;
             rotationSpeed = 80;
-print("this works");
+            print("this works");
         }
     }
 }

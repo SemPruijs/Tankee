@@ -341,14 +341,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c2c22142d3e42b18b6095322aadc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 700
-  rotationSpeed: 40
+  moveSpeed: 900
+  rotationSpeed: 25
   player: 2
   heath: 30
   angle: 0
   deadSound: {fileID: 8300000, guid: 158a10bce54ed413694c3616197f61d2, type: 3}
   impactSound: {fileID: 8300000, guid: 73daa529140724487b89ef426f2fc3fa, type: 3}
   audioSource: {fileID: 0}
+  TimeSpeed: 0
 --- !u!50 &3430121570852205318
 Rigidbody2D:
   serializedVersion: 4
