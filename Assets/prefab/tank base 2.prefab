@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298d52b1271124323889a9638a7c0f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 150
+  rotationSpeed: 300
   player: 2
   tankBase: {fileID: 3430121570852205336}
   localPositionArm: {x: 0, y: 0, z: -0.5}

@@ -18,17 +18,13 @@ public class armStuff : MonoBehaviour
 
     void Update()
     {
-        float moveHorizontal = Input.GetAxisRaw ("RJX" + player.ToString());
-        // float moveVertical = Input.GetAxisRaw ("RJY" + player.ToString());
+        float  RL1 = Input.GetAxis("RL1" + player.ToString());
         if (GameManager.Instance.state == GameManager.State.playing) {
             if (rotation >= 360 ) {
                  rotation = 0;
              }
-            rotation = rotation + moveHorizontal * rotationSpeed * Time.deltaTime;
+            rotation = rotation + RL1 * rotationSpeed * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(0, 0, -rotation);
         }
-        // transform.localPosition = localPositionArm;
-        // rb2d.AddTorque(moveHorizontal * Time.fixedDeltaTime);
-        // print(moveVertical);
     }
 }
