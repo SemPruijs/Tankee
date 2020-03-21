@@ -12,10 +12,10 @@ public class baseMovement : MonoBehaviour
     public int heath;
     
     //----------------- movement ------------------
-    public float moveSpeed;  
+    private float _moveSpeed = 900;  
     private float _currentRotation;
-    public float rotationSpeed;
-    public float angle;
+    private float _rotationSpeed = 25;
+    private float _angle;
 
     private float _moveHorizontal;
     private float _moveVertical;
@@ -28,32 +28,28 @@ public class baseMovement : MonoBehaviour
 
     
     //----------------- Power up ------------------    
-    //time for powerup
     public float TimeSpeed;
-    
-    
-    
-    
+
     //----------------- Start ------------------
     void Start()
     {
+         audioSource = GameObject.FindWithTag ("audioSource").GetComponent<AudioSource>();
          rb2d = GetComponent<Rigidbody2D> ();
          heath =+ 30;
-         audioSource = GameObject.FindWithTag ("audioSource").GetComponent<AudioSource>();
     }
 
     //----------------- Update ------------------
     private void Update()
     {
-        _moveVertical= Input.GetAxis ("LJX" + player.ToString());
+        _moveHorizontal = Input.GetAxis ("LJX" + player.ToString());
         _moveVertical = Input.GetAxis ("LJY" + player.ToString());    
     }
 
     void FixedUpdate()
     {
         if (GameManager.Instance.state == GameManager.State.playing) {
-            rb2d.AddForce(transform.up * Time.fixedDeltaTime * moveSpeed * -_moveVertical);
-            rb2d.AddTorque(-rotationSpeed * _moveHorizontal * Time.fixedDeltaTime);
+            rb2d.AddForce(transform.up * Time.fixedDeltaTime * _moveSpeed * -_moveVertical);
+            rb2d.AddTorque(-_rotationSpeed * _moveHorizontal * Time.fixedDeltaTime);
         }
             
     }
@@ -61,9 +57,9 @@ public class baseMovement : MonoBehaviour
     //----------------- Collision ------------------
     
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "bullet") {
+        if (collision.gameObject.CompareTag("bullet")) {
             if (heath == 1) {
-                whoHasWon();    
+                determineWhoHasWon();    
                 audioSource.PlayOneShot(deadSound, 1.0F);
                 GameManager.Instance.state = GameManager.State.hasWon;
                 Destroy(gameObject);
@@ -71,7 +67,7 @@ public class baseMovement : MonoBehaviour
                 damage();
             }
         }
-        if (collision.gameObject.tag == "speedPowerUp") {
+        if (collision.gameObject.CompareTag("speedPowerUp")) {
             Destroy(collision.gameObject);
             speedPowerUp();
         }
@@ -88,13 +84,13 @@ public class baseMovement : MonoBehaviour
     
     void speedPowerUp() {
         TimeSpeed = 30f;
-        moveSpeed = 1500;
-        rotationSpeed = 80;
+        _moveSpeed = 1500;
+        _rotationSpeed = 80;
     }
 
     //----------------- After game ------------------
     
-    void whoHasWon() {
+    void determineWhoHasWon() {
         if (player == 1) {
             //yellow
             GameManager.Instance.hasWonString = "Yellow player wins!";
@@ -103,7 +99,4 @@ public class baseMovement : MonoBehaviour
             GameManager.Instance.hasWonString = "Green player wins!";
         }
     }
-
-   
-
 }
