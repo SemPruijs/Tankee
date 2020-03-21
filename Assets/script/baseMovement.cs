@@ -10,6 +10,10 @@ public class baseMovement : MonoBehaviour
     public int player;
     private Rigidbody2D rb2d;
     public int heath;
+
+    private float _normalMoveSpeed;
+    private float _normalRotationSpeed;
+
     
     //----------------- movement ------------------
     private float _moveSpeed = 900;  
@@ -28,7 +32,7 @@ public class baseMovement : MonoBehaviour
 
     
     //----------------- Power up ------------------    
-    public float TimeSpeed;
+    private float _timeSpeedPowerUp;
 
     //----------------- Start ------------------
     void Start()
@@ -36,13 +40,26 @@ public class baseMovement : MonoBehaviour
          audioSource = GameObject.FindWithTag ("audioSource").GetComponent<AudioSource>();
          rb2d = GetComponent<Rigidbody2D> ();
          heath =+ 30;
+
+         //store normal speed
+         _normalMoveSpeed = _moveSpeed;
+         _normalRotationSpeed = _rotationSpeed;
     }
 
     //----------------- Update ------------------
     private void Update()
     {
+        //input manager
         _moveHorizontal = Input.GetAxis ("LJX" + player.ToString());
-        _moveVertical = Input.GetAxis ("LJY" + player.ToString());    
+        _moveVertical = Input.GetAxis ("LJY" + player.ToString());
+        
+        //powerup count down
+        _timeSpeedPowerUp -= Time.deltaTime;
+        if (_timeSpeedPowerUp <= 0)
+        {
+            _moveSpeed = _normalMoveSpeed;
+            _rotationSpeed = _normalRotationSpeed;
+        }
     }
 
     void FixedUpdate()
@@ -82,7 +99,7 @@ public class baseMovement : MonoBehaviour
     }
     
     void speedPowerUp() {
-        TimeSpeed = 30f;
+        _timeSpeedPowerUp = 15f;
         _moveSpeed = 1500;
         _rotationSpeed = 80;
     }
