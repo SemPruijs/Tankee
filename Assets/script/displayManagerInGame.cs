@@ -35,7 +35,7 @@ public class displayManagerInGame : MonoBehaviour
         timeLeftText.text = TimeLeftString;
         timeLeft -= Time.deltaTime;
         counting.SetActive(GameManager.Instance.state == GameManager.State.counting || GameManager.Instance.state == GameManager.State.playing);
-        playing.SetActive(GameManager.Instance.state == GameManager.State.playing);
+        playing.SetActive(GameManager.Instance.state == GameManager.State.playing || GameManager.Instance.state == GameManager.State.hasWon);
         hasWon.SetActive(GameManager.Instance.state == GameManager.State.hasWon);
         hasWonText.text = GameManager.Instance.hasWonString;
     }

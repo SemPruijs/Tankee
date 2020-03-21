@@ -22,6 +22,38 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
+    m_Name: RL11
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick 1 button 4
+    positiveButton: joystick 1 button 5
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.1
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 4
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: RL12
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick 2 button 4
+    positiveButton: joystick 2 button 5
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.1
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 4
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: LJX2
     descriptiveName: 
     descriptiveNegativeName: 
@@ -36,70 +68,6 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 2
-  - serializedVersion: 3
-    m_Name: RJY2
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
-    altNegativeButton: a
-    altPositiveButton: d
-    gravity: 3
-    dead: 0.1
-    sensitivity: 1
-    snap: 1
-    invert: 0
-    type: 2
-    axis: 3
-    joyNum: 2
-  - serializedVersion: 3
-    m_Name: RJY1
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
-    altNegativeButton: a
-    altPositiveButton: d
-    gravity: 3
-    dead: 0.1
-    sensitivity: 1
-    snap: 1
-    invert: 0
-    type: 2
-    axis: 3
-    joyNum: 1
-  - serializedVersion: 3
-    m_Name: RJX1
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
-    altNegativeButton: a
-    altPositiveButton: d
-    gravity: 3
-    dead: 0.1
-    sensitivity: 1
-    snap: 1
-    invert: 0
-    type: 2
-    axis: 2
-    joyNum: 1
-  - serializedVersion: 3
-    m_Name: RJX2
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
-    altNegativeButton: a
-    altPositiveButton: d
-    gravity: 3
-    dead: 0.1
-    sensitivity: 1
-    snap: 1
-    invert: 0
-    type: 2
-    axis: 2
     joyNum: 2
   - serializedVersion: 3
     m_Name: LJY1

@@ -16,6 +16,9 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
             ExplodeObstacle();
         }
+        if (collision.gameObject.tag == "speedPowerUp") {
+            Destroy(gameObject);
+        }
     }
 
     void ExplodeEnemy() {
