@@ -78,8 +78,7 @@ public class baseMovement : MonoBehaviour
     
     void damage() {
         audioSource.PlayOneShot(impactSound, 0.1F);
-        heath = heath - 1;
-        print(heath.ToString());
+        heath -= 1;
     }
     
     void speedPowerUp() {
