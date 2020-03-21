@@ -26,9 +26,14 @@ public class baseMovement : MonoBehaviour
 
     //----------------- audio ------------------
 
+    //clips
     public AudioClip deadSound;
     public AudioClip impactSound;
+    public AudioClip speedPowerUpSound;
+    
+    //source
     public AudioSource audioSource;
+
 
     
     //----------------- Power up ------------------    
@@ -102,6 +107,7 @@ public class baseMovement : MonoBehaviour
         _timeSpeedPowerUp = 15f;
         _moveSpeed = 1500;
         _rotationSpeed = 80;
+        audioSource.PlayOneShot(speedPowerUpSound, 1.0F);
     }
 
     //----------------- After game ------------------
