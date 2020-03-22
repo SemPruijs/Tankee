@@ -7,10 +7,12 @@ using Random = System.Random;
 
 public class PowerupSpawner : MonoBehaviour
 {
+    //-------------- Power up Prefabs ----------------
     public GameObject speedPowerUpPrefab;
 
     private float _spawnTime;
 
+    public ParticleSystem spawnPowerUpParticleSystem;
     private void Start()
     {
         NewSpawnTime();
@@ -30,13 +32,15 @@ public class PowerupSpawner : MonoBehaviour
     }
     private void NewSpawnTime()
     {
-        _spawnTime = UnityEngine.Random.Range(20f, 50f);
+        _spawnTime = UnityEngine.Random.Range(20f, 85f);
     }
     
     IEnumerator SpawnPowerUp()
     {
         yield return new WaitForSeconds(_spawnTime);
         GameObject powerUp = pickRandomPowerUp();
+        Instantiate(spawnPowerUpParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), Quaternion.identity);
+        yield return new WaitForSeconds(3f);
         Instantiate(powerUp, transform.position, Quaternion.identity);
         GameObject powerUpInGame = GameObject.Find(powerUp.name + "(Clone)");
 
@@ -47,6 +51,8 @@ public class PowerupSpawner : MonoBehaviour
                 NewSpawnTime();
                 yield return new WaitForSeconds(_spawnTime);
                 powerUp = pickRandomPowerUp();
+                Instantiate(spawnPowerUpParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), Quaternion.identity);
+                yield return new WaitForSeconds(3f);
                 Instantiate(powerUp, transform.position, Quaternion.identity);
                 powerUpInGame = GameObject.Find(powerUp.name + "(Clone)");
             }
