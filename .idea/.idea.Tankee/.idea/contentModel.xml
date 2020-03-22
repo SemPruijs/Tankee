@@ -16,6 +16,7 @@
           <e p="Camera.cs" t="Include" />
           <e p="displayManagerInGame.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="PowerupSpawner.cs" t="Include" />
           <e p="sceneLoader.cs" t="Include" />
           <e p="shooting.cs" t="Include" />
         </e>

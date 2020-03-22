@@ -25,7 +25,7 @@ public class shooting : MonoBehaviour
         }
             
     }
-
+    
     void shoot() {
         GameObject bullet = Instantiate(fireBullet, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb2d = bullet.GetComponent<Rigidbody2D>();
