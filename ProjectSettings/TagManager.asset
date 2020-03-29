@@ -8,6 +8,7 @@ TagManager:
   - bullet
   - audioSource
   - speedPowerUp
+  - shieldPowerUp
   layers:
   - Default
   - TransparentFX

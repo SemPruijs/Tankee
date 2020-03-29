@@ -8,15 +8,18 @@ public class bullet : MonoBehaviour
     public GameObject particelExplotionObstacle;
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.CompareTag("Player")) {
             ExplodeEnemy();
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Obstacle") {
+        if (collision.gameObject.CompareTag("Obstacle")) {
             Destroy(gameObject);
             ExplodeObstacle();
         }
-        if (collision.gameObject.tag == "speedPowerUp") {
+        if (collision.gameObject.CompareTag("speedPowerUp")) {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("shieldPowerUp")) {
             Destroy(gameObject);
         }
     }

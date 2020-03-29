@@ -93,6 +93,9 @@ public class baseMovement : MonoBehaviour
             Destroy(collision.gameObject);
             speedPowerUp();
         }
+        if (collision.gameObject.CompareTag("shieldPowerUp")) {
+            Destroy(collision.gameObject);
+        }
     }
 
     
