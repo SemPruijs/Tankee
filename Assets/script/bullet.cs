@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
@@ -8,19 +10,19 @@ public class bullet : MonoBehaviour
     public GameObject particelExplotionObstacle;
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
-            ExplodeEnemy();
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Obstacle")) {
-            Destroy(gameObject);
-            ExplodeObstacle();
-        }
-        if (collision.gameObject.CompareTag("speedPowerUp")) {
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("shieldPowerUp")) {
-            Destroy(gameObject);
+        switch (collision.gameObject.tag)
+        {
+            case "Player":
+                ExplodeEnemy();
+                Destroy(gameObject);
+                break;
+            case "Obstacle": 
+                Destroy(gameObject);
+                ExplodeObstacle();
+                break;
+            case "speedPowerUp":
+                Destroy(gameObject);
+                break;
         }
     }
 

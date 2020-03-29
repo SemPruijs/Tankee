@@ -9,6 +9,7 @@ TagManager:
   - audioSource
   - speedPowerUp
   - shieldPowerUp
+  - Shield
   layers:
   - Default
   - TransparentFX
