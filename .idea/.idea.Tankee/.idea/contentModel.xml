@@ -13,7 +13,6 @@
           <e p="audioManager.cs" t="Include" />
           <e p="baseMovement.cs" t="Include" />
           <e p="bullet.cs" t="Include" />
-          <e p="Camera.cs" t="Include" />
           <e p="displayManagerInGame.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="PowerupSpawner.cs" t="Include" />
