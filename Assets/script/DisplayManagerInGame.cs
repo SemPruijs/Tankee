@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class displayManagerInGame : MonoBehaviour
+public class DisplayManagerInGame : MonoBehaviour
 {
     public Text scorePlayer1;
     public Text scorePlayer2;
     public Text timeLeftText;
     public Text hasWonText;
-    public baseMovement Player1;
-    public baseMovement Player2;
+    public BaseMovement Player1;
+    public BaseMovement Player2;
     public float timeLeft = 3; 
     private string TimeLeftString;
     public GameObject InGameCanvasGameObject;

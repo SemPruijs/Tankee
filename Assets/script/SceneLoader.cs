@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class sceneLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     public GameObject greenTank;
     public GameObject yellowTank;
 
-    public displayManagerInGame displayManagers;
+    public DisplayManagerInGame displayManagers;
 
     public void map1() {
         SceneManager.LoadScene("map1");

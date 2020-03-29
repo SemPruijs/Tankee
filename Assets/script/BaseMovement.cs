@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class baseMovement : MonoBehaviour
+public class BaseMovement : MonoBehaviour
 {
     //----------------- Player ------------------
 

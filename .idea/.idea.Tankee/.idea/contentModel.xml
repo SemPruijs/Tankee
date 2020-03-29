@@ -9,7 +9,7 @@
           <e p="CloudBuild.cs" t="Include" />
         </e>
         <e p="script" t="Include">
-          <e p="armStuff.cs" t="Include" />
+          <e p="ArmMovement.cs" t="Include" />
           <e p="audioManager.cs" t="Include" />
           <e p="baseMovement.cs" t="Include" />
           <e p="bullet.cs" t="Include" />

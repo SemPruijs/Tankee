@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class armStuff : MonoBehaviour
+public class ArmMovement : MonoBehaviour
 {
     public float rotationSpeed; 
     private float rotation;

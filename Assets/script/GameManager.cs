@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public displayManagerInGame displayManagers;
+    public DisplayManagerInGame displayManagers;
 
     //the players
     public GameObject greenTank;
@@ -53,12 +53,12 @@ public class GameManager : MonoBehaviour
             case "map2":
             case "map3":
             case "map4":
-                displayManagers.Player1 = Instantiate(greenTank, new Vector3(-6f, 0f, 0.5f),Quaternion.Euler(0, 0, 270)).GetComponent<baseMovement>();
-                displayManagers.Player2 = Instantiate(yellowTank, new Vector3(6f, 0f, 0.5f),Quaternion.Euler(0, 0, 90)).GetComponent<baseMovement>();
+                displayManagers.Player1 = Instantiate(greenTank, new Vector3(-6f, 0f, 0.5f),Quaternion.Euler(0, 0, 270)).GetComponent<BaseMovement>();
+                displayManagers.Player2 = Instantiate(yellowTank, new Vector3(6f, 0f, 0.5f),Quaternion.Euler(0, 0, 90)).GetComponent<BaseMovement>();
             break;
             case "map1":
-                displayManagers.Player1 = Instantiate(greenTank, new Vector3(-3.5f, -2f, 0.5f),Quaternion.identity).GetComponent<baseMovement>();
-                displayManagers.Player2 = Instantiate(yellowTank, new Vector3(3.5f, 1.5f, 0.5f),Quaternion.Euler(0, 0, 180)).GetComponent<baseMovement>();
+                displayManagers.Player1 = Instantiate(greenTank, new Vector3(-3.5f, -2f, 0.5f),Quaternion.identity).GetComponent<BaseMovement>();
+                displayManagers.Player2 = Instantiate(yellowTank, new Vector3(3.5f, 1.5f, 0.5f),Quaternion.Euler(0, 0, 180)).GetComponent<BaseMovement>();
             break;
         }
     }
