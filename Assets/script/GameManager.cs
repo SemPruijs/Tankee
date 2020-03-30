@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         currentScene = SceneManager.GetActiveScene();
-        spawnTankees();
     }
     public void destroyTankees() {
         Destroy(greenTank);
