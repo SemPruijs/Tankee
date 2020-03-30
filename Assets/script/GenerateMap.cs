@@ -21,15 +21,50 @@ public class GenerateMap : MonoBehaviour
         {0f, 0f, 90f, 90f, 90f, 90f, 0f, 0f} // rotation
     };
     
+    private float[,] wallPositionsMap1 =
+    {
+        {0f, -3.5f, 3.5f, -4.5f, 4.5f, -2.5f, 2.5f, -3.5f, 3.5f, 0f}, // x
+        {3f, 1.8f, 1.8f, 0.81f, 0.81f, -0.81f, -0.81f, -1.8f, -1.8f, -3f}, // y
+        {0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f}, // z
+        {0f, 0f, 0f, 90f, 90f, 90f, 90f, 0f, 0f, 0f} // rotation
+    };
+
+    private float[,] wallPositionsMap2 =
+    {
+        {0f, -3.2f, 3.2f, -4.5f, 4.5f, -3.2f, 3.2f, 0f}, // x
+        {4.5f, 3.2f, 3.2f, 0f, 0f, -3.2f, -3.2f, -4.5f}, // y
+        {0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f}, // z
+        {0f, 45f, -45f, 90f, 90f, -45f, 45f, 0f} // rotation
+    };
+
+    
     //-------------------- power up spawner positions --------------------
 
     private float[,] powerUpSpawnerPositionsMap0 =
     {
-        {0f, -1f, 1f, 0f},
-        {1f, 0f, 0f, -1f},
-        {0f, 0f, 0f, 0f},
-        {0f, 0f, 0f, 0f}
+        {0f, -1f, 1f, 0f}, // x
+        {1f, 0f, 0f, -1f}, // y
+        {0f, 0f, 0f, 0f}, // z
+        {0f, 0f, 0f, 0f} // rotation
     };
+    
+    private float[,] powerUpSpawnerPositionsMap1 =
+    {
+        {-1f, 1f, -1f, 1f}, // x
+        {1f, 1f, -1f, -1f}, // y
+        {0f, 0f, 0f, 0f}, // z
+        {0f, 0f, 0f, 0f} // rotation
+    };
+    
+    private float[,] powerUpSpawnerPositionsMap2 =
+    {
+        {-1f, 1f, -1f, 1f}, // x
+        {1f, 1f, -1f, -1f}, // y
+        {0f, 0f, 0f, 0f}, // z
+        {0f, 0f, 0f, 0f} // rotation
+    };
+
+    
     
     
     
@@ -41,6 +76,14 @@ public class GenerateMap : MonoBehaviour
             case 0:
                 place(wallPrefab, wallPositionsMap0);
                 place(powerUpSpawner, powerUpSpawnerPositionsMap0);
+                break;
+            case 1:
+                place(wallPrefab, wallPositionsMap1);
+                place(powerUpSpawner, powerUpSpawnerPositionsMap1);
+                break;
+            case 2:
+                place(wallPrefab, wallPositionsMap2);
+                place(powerUpSpawner, powerUpSpawnerPositionsMap2);
                 break;
         }
     }
@@ -60,6 +103,6 @@ public class GenerateMap : MonoBehaviour
 
     void Start()
     {
-        Generate(0);
+        Generate(2);
     }
 }
