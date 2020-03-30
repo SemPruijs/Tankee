@@ -754,7 +754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1228660834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1222,9 +1222,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54136d0398a14886b2946e131618508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayManager: {fileID: 1125975305}
   wallPrefab: {fileID: 7160039421333004533, guid: 86d9a567131c247188d3eee617adf202,
     type: 3}
   powerUpSpawner: {fileID: 1384572513589612179, guid: e9e7292d9271d401cb9dabf9d72dddd6,
+    type: 3}
+  greenPlayer: {fileID: 4868119503987855801, guid: c696146555ce8469cb478ed873d3ff90,
+    type: 3}
+  yellowPlayer: {fileID: 3430121570852205336, guid: 9a4cde7f203ab4ca4900f335465215d1,
     type: 3}
 --- !u!4 &1532001672
 Transform:

@@ -6,9 +6,6 @@ using Debug = UnityEngine.Debug;
 
 public class GenerateMap : MonoBehaviour
 {
-    //-------------------- Scripts --------------------
-    public DisplayManagerInGame displayManager;
-    
     //-------------------- Prefabs --------------------
     public GameObject wallPrefab;
     public GameObject powerUpSpawner;
@@ -186,17 +183,12 @@ public class GenerateMap : MonoBehaviour
             switch (player)
             {
                 case 0:
-                    displayManager.Player1 = Instantiate(greenPlayer, new Vector3(x, y, z), Quaternion.Euler(0f, 0f, rotation)).GetComponent<BaseMovement>();
+                    Instantiate(greenPlayer, new Vector3(x, y, z), Quaternion.Euler(0f, 0f, rotation)).GetComponent<BaseMovement>();
                     break;
                 case 1:
-                    displayManager.Player2 = Instantiate(yellowPlayer, new Vector3(x, y, z), Quaternion.Euler(0f, 0f, rotation)).GetComponent<BaseMovement>();
+                    Instantiate(yellowPlayer, new Vector3(x, y, z), Quaternion.Euler(0f, 0f, rotation)).GetComponent<BaseMovement>();
                     break;
             }
         }
-    }
-    
-    void Start()
-    {
-        Generate(1);
     }
 }
