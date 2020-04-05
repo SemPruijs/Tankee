@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -22,18 +21,9 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    //the players
-    public GameObject greenTank;
-    public GameObject yellowTank;
-    public GameObject blueTank;
-    public GameObject pinkTank;
-    public enum player {green, yellow, blue, pink};
 
     public enum State {playing, pause, counting, hasWon, menu};
     public State state = State.pause;
-    public string hasWonString;
-
-    public int map;
     
     public void playing() {
         state = State.playing;

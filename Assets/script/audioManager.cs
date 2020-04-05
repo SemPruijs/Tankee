@@ -14,9 +14,9 @@ public class audioManager : MonoBehaviour
 
     void Update() {
         if (!audioSource.isPlaying) {
-            if (GameManager.Instance.state == GameManager.State.playing) {
+            //if (GameManager.Instance.state == GameManager.State.playing) {
                 audioSource.Play();
-            }
+            //}
         }
     }
 }

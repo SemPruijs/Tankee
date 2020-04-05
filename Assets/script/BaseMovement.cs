@@ -69,10 +69,10 @@ public class BaseMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameManager.Instance.state == GameManager.State.playing) {
+        //if (GameManager.Instance.state == GameManager.State.playing) {
             rb2d.AddForce(transform.up * Time.fixedDeltaTime * _moveSpeed * -_moveVertical);
             rb2d.AddTorque(-_rotationSpeed * _moveHorizontal * Time.fixedDeltaTime);
-        }
+        //}
             
     }
 
@@ -83,7 +83,7 @@ public class BaseMovement : MonoBehaviour
             if (heath == 1) {
                 determineWhoHasWon();    
                 audioSource.PlayOneShot(deadSound, 1.0F);
-                GameManager.Instance.state = GameManager.State.hasWon;
+                // GameManager.Instance.state = GameManager.State.hasWon;
                 Destroy(gameObject);
             } else {
                 damage();
@@ -118,10 +118,10 @@ public class BaseMovement : MonoBehaviour
     void determineWhoHasWon() {
         if (player == 1) {
             //yellow
-            GameManager.Instance.hasWonString = "Yellow player wins!";
+            // GameManager.Instance.hasWonString = "Yellow player wins!";
         } else {
             //green
-            GameManager.Instance.hasWonString = "Green player wins!";
+            // GameManager.Instance.hasWonString = "Green player wins!";
         }
     }
 }

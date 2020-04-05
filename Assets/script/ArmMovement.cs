@@ -19,12 +19,10 @@ public class ArmMovement : MonoBehaviour
     void Update()
     {
         float  RL1 = Input.GetAxis("RL1" + player.ToString());
-        if (GameManager.Instance.state == GameManager.State.playing) {
             if (rotation >= 360 ) {
                  rotation = 0;
              }
             rotation = rotation + RL1 * rotationSpeed * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(0, 0, -rotation);
-        }
     }
 }
