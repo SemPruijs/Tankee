@@ -191,4 +191,21 @@ public class GenerateMap : MonoBehaviour
             }
         }
     }
+
+    private void DestroyAllObjectsWithTag(string tag)
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag (tag);
+     
+        for(var i = 0 ; i < gameObjects.Length; i ++)
+        {
+            Destroy(gameObjects[i]);
+        }
+    }
+
+    public void DestroyMap()
+    {
+        DestroyAllObjectsWithTag("Obstacle");
+        DestroyAllObjectsWithTag("Player");
+        DestroyAllObjectsWithTag("PowerUpSpawner");
+    }
 }

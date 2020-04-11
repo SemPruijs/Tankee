@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public enum State {playing, pause, counting, hasWon, menu};
     public State state = State.pause;
+    public GameObject mapGenerator;
     
     public void playing() {
         state = State.playing;
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void menu()
     {
         state = State.menu;
+        mapGenerator.GetComponent<GenerateMap>().DestroyMap();
     }
 
     public void pause()

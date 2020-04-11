@@ -2122,6 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
+  mapGenerator: {fileID: 1421162191}
 --- !u!4 &1449541339
 Transform:
   m_ObjectHideFlags: 0
