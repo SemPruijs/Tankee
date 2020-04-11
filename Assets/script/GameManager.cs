@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
         state = State.menu;
     }
 
+    public void pause()
+    {
+        state = State.pause;
+    }
+
     public void counting()
     {
         state = State.counting;
