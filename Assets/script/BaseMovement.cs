@@ -69,11 +69,10 @@ public class BaseMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //if (GameManager.Instance.state == GameManager.State.playing) {
+        if (GameManager.Instance.state == GameManager.State.playing) {
             rb2d.AddForce(transform.up * Time.fixedDeltaTime * _moveSpeed * -_moveVertical);
             rb2d.AddTorque(-_rotationSpeed * _moveHorizontal * Time.fixedDeltaTime);
-        //}
-            
+        }
     }
 
     //----------------- Collision ------------------
